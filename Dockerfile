@@ -6,8 +6,6 @@ WORKDIR /
 
 COPY . .
 
-RUN ["pip3", "install", "pipenv"]
+RUN ["pip3", "install", "requirements.txt"]
 
-RUN ["pipenv", "install"]
-
-CMD pipenv run python flask-auth.py
+CMD  python flask-auth.py
