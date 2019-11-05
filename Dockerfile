@@ -1,4 +1,4 @@
-FROM python:3.6.8-alpine
+FROM python:3.7.4
 
 LABEL image for a very simple flask application
 
