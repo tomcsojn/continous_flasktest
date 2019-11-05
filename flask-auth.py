@@ -33,11 +33,11 @@ def security():
 #get password from dataframe with plain text
 @auth.verify_password
 def verify_password(username, password):
-    if(users[users.eq(username).any(1)].empty):
+    if(users[users['username'].eq(username)].empty):
         return False
     else:
         g.username = username
-        return (users[users.eq(username).any(1)]['pass']==password)[1]
+        return (users[users['username'].eq(username)]['pass'].iloc[0]==password)
     
         
 
